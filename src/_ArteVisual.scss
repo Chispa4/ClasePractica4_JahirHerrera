@@ -1,0 +1,42 @@
+@import './variables';
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ArteVisual {
+    @include flexcenter;
+    height: 180vh;
+    background: url(/public/img/frases-atardecer-wide.jpg) no-repeat
+    bottom center;
+    background-size: cover;
+    padding: 0 10vh;
+    color: $primary-color;
+}
+
+.Encabezado {
+    position: relative;
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    background: $third-color;
+    padding: 2rem;
+    border-radius: 20px 0;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 50%;
+    }
+    &::before {
+        left: 0;
+        border-bottom: 6px solid $secondary-color;
+    }
+    &::after {
+        right: 0;
+        border-top: 6px solid $secondary-color;
+    }
+}
