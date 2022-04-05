@@ -40,7 +40,7 @@
         padding: 26px 10px;
         cursor: pointer;
         z-index: 1;
-        display:none;
+        display: block;
 
         &__line {
             display: block;
@@ -71,19 +71,5 @@
 
     .menu-btn {
         display: none;
-    }
-    
-    &.scrolled{
-        height: 50px;
-        background: rgba (0,0,0, 0.9);
-        color: $primary-color;
-
-        .menu-icon {
-            &__line,
-            &__line::before,
-            &__line::after {
-            background: $primary-color;
-            }
-        }
     }
 }
