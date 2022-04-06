@@ -1,7 +1,18 @@
 $primary-color: white;
 $secondary-color: black;
-$third-color: rgba(245, 0, 0, 0.2);
-$fourth-color: rgb(41, 41, 41);
+$third-color: #f5000033;
+$fourth-color: #292929;
+$footer-color1: #24262b;
+$footer-color2: #e91e63;
+$footer-color3: #bbbbbb;
+$footer-color4: #ffffff33;
+
+$pallette: (
+    'primary': #0e0f4b,
+    'secondary': #3c0f51,
+    'third': #e9e9e9,
+);
+
 $font-weight: (
     "regular": 400,
     "medium": 500,

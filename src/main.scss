@@ -1,7 +1,12 @@
+@import './footer';
 @import './media';
 @import './header';
 @import './ArteVisual';
+
+
 @import './variables';
+@import './functions';
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @mixin flexcenter {
     display: flex;
@@ -28,4 +33,17 @@ body {
         font-weight: map-get($font-weight, bold);
 
     }
+}
+
+.dadcontainer {
+    color: $primary-color;
+    font-weight: map-get($font-weight, 'regular');
+}
+
+.subcontainer1 {
+    background: color('primary');
+}
+
+.subcontainer2 {
+    background: color('secondary');
 }
