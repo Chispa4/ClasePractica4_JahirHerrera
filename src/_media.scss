@@ -78,3 +78,27 @@
         }
     }
 }
+
+@media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+
+  @media only screen and (max-width: 767px){
+    .dadcontainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .5fr 1fr .5fr;
+        grid-template-areas: 
+        "subcontainer1"
+        "subcontainer2"
+        "gallery"
+        "form";
+    }
+  }

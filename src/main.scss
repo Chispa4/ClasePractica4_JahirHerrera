@@ -50,21 +50,24 @@ body {
     
     display: grid;
     gap: 1.5rem;
+    height: 100vh;
     grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas: 
+    "subcontainer1 subcontainer2"
+    "form gallery"
 }
 
 .subcontainer1 {
-    display: grid;
-    grid-column: 2;
-
     @include cardstylin;
     @include flexcenter;
     background: color('primary');
+
+    padding: 20px
 }
 
 .subcontainer2 {
-    display: grid;
-    grid-row: 1;
+    
 
     @include cardstylin;
     @include flexcenter;
@@ -72,7 +75,7 @@ body {
 }
 
 .form {
-    grid-column: 1;
+    
 
     @include flexcenter;
     @include cardstylin;
