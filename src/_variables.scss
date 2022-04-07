@@ -7,6 +7,8 @@ $footer-color2: #e91e63;
 $footer-color3: #bbbbbb;
 $footer-color4: #ffffff33;
 
+$radius: 15px;
+
 $pallette: (
     'primary': #0e0f4b,
     'secondary': #3c0f51,
@@ -20,3 +22,30 @@ $font-weight: (
 );
 
 $titles: 16, 20, 24, 32;
+
+@mixin fgaleria($dir, $align, $wra:Y){
+    display: flex;
+    flex-direction: $dir;
+
+    @if $dir==row {
+        justify-content: $align;
+    }
+
+    @if $wra==N {
+        flex-wrap: nowrap;
+    } @else{
+        flex-wrap: wrap;
+    }
+}
+
+
+@mixin sty {
+    background-color: $fourth-color;
+    color: $footer-color3;
+    margin: 10px;
+    padding: 15px 5px 20px;
+    border-radius: $radius;
+    display: block;
+    text-align: center;
+    
+}

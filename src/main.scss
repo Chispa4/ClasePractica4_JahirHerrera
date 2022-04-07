@@ -2,7 +2,7 @@
 @import './media';
 @import './header';
 @import './ArteVisual';
-
+@import './gallery';
 
 @import './variables';
 @import './functions';
@@ -50,12 +50,10 @@ body {
     
     display: grid;
     gap: 1.5rem;
-    height: 100vh;
+    height: 100%;
     grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr;
-    grid-template-areas: 
-    "subcontainer1 subcontainer2"
-    "form gallery"
+    grid-template-areas:"subcontainer1 subcontainer2"
+                        "form galeria";
 }
 
 .subcontainer1 {
@@ -74,16 +72,66 @@ body {
     background: color('secondary');
 }
 
-.form {
+.form1 {
     
 
     @include flexcenter;
     @include cardstylin;
 
-    background: color('primary');
+    background: color('secondary');
 }
 
-.gallery {
+.btncontainer {
+    @include flexcenter;
+
+    padding: 20px 50px;
+    position: relative;
+    margin: 32px; 
+}
+
+.btn-1 {
+    background: $secondary-color;
+    color: $primary-color;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s ease ;
+    padding: 20px 50px;
+   
+}
+
+.btn-1::after, .btn-1::before {
+    content: "";
+        position: absolute;
+        opacity: 0.3;
+        border-radius: inherit;
+        background: $secondary-color;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: transform 0.3s ease;
+}
+
+.btn-1{
+    &:hover {
+        transform: translate(-12px ,-12px)
+    }
+}
+
+.btn-1 {
+    &:hover::after {
+        transform: translate(6px ,6px)
+    }
+}
+
+.btn-1 {
+    &:hover::before {
+        transform: translate(12px ,12px)
+    }
+}
+
+.gal {
 
 
     @include flexcenter;
