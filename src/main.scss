@@ -13,6 +13,10 @@
     justify-content: center;
     align-items: center;
 }
+@mixin cardstylin {
+    border-radius: .5rem;
+    padding: .5rem;
+}
 
 * {
     box-sizing: border-box;
@@ -35,15 +39,57 @@ body {
     }
 }
 
+.btn-warning {
+    @include flexcenter;
+    
+}
+
 .dadcontainer {
     color: $primary-color;
     font-weight: map-get($font-weight, 'regular');
+    
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr, 1fr;
 }
 
 .subcontainer1 {
+    display: grid;
+    grid-column: 2;
+
+    @include cardstylin;
+    @include flexcenter;
     background: color('primary');
 }
 
 .subcontainer2 {
+    display: grid;
+    grid-row: 1;
+
+    @include cardstylin;
+    @include flexcenter;
     background: color('secondary');
+}
+
+.form {
+    grid-column: 1;
+
+    @include flexcenter;
+    @include cardstylin;
+
+    background: color('primary');
+}
+
+.gallery {
+
+
+    @include flexcenter;
+    @include cardstylin;
+
+    background: color('secondary');
+}
+@each $size in $titles {
+    .title__medium-#{$size} {
+        font-size: $size*1px;
+    }
 }
