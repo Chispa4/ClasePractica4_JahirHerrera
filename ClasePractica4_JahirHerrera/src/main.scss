@@ -4,6 +4,7 @@
 @import './header';
 @import './tecno';
 @import './media';
+@import './footer';
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
@@ -127,4 +128,94 @@ body {
             transform: translate(12px ,12px)
         }
     }
+}
+
+
+section {
+  margin-top: 75px;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: color(fifth);
+  overflow: hidden;
+
+  .heading {
+    display: inline-block;
+    position: relative;
+    color: color(primary);
+    font-size: 4vw;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: map-get($font-weight, 'bold');
+
+    b {
+      color: color(third);
+    }
+  }
+}
+
+.wrapper {
+  @include flexcenter;
+
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .container {
+    position: relative;
+    width: 350px;
+    color: color(third);
+    background: color(primary);
+    margin: 40px 10px;
+    padding: 30px 20px;
+    border-radius: 3px;
+    transition: .3s ease;
+
+    .profile {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -10%;
+      width: 100%;
+      display: block;
+
+      .imgBox {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        margin: auto;
+        border: 8px solid color(third);
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          border-radius: 50%;
+          object-fit: cover;
+          transition: .3s ease;
+        }
+      }
+
+      h2 {
+        padding: 5px 0;
+        text-transform: capitalize;
+        color: color(third);
+        letter-spacing: 1px;
+        text-align: center;
+      }
+    }
+  
+    p {
+      margin-top: 100px;
+      color: color(third);
+      padding: 0 8px;
+      font-size: 15px;
+      opacity: .8;
+    }
+  }
 }
