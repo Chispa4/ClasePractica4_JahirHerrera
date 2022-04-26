@@ -20,8 +20,11 @@
     .nav-links {
         display: flex;
         list-style: none;
+        
 
         .nav-link {
+            
+            color: color('primary');
 
             a {
                 margin: .2rem;
@@ -69,5 +72,15 @@
 
     .menu-btn {
         display: none;
+    }
+}
+
+.logo {
+    img {
+        height: 10%;
+        width: 10%;
+        border-radius: 50%;
+
+        cursor: pointer;
     }
 }
